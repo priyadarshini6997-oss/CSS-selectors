@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+  <style>
+    #header{
+      color:#2c3e50 ;
+      font-size: 32px;
+      text-align: center;
+      margin:20px auto;
+    }
+    .intro{
+      font-style: italic;
+    }
+    .highlight{
+      background-color: #f0f8ff;
+      padding: 8px;
+    }
+    .box{
+      border:1px solid #ccc;
+      padding:16px;
+      margin-bottom: 10px;
+    }
+    div p{
+      font-size: 16px;
+    }
+    div > p{
+      font-weight: bold;
+    }
+    a:hover{
+      color:red;
+      text-decoration:underline;
+    }
+    p::first-letter{
+      font-size: 24px;
+      color:orange;
+    }
+    p:not(.highlight){
+      background-color: #e0e0e0;
+    }
+
+  </style>
+</head>
+<body>
+  <h1 id="header">CSS Selectors</h1>
+  <p class="intro">CSS selectors are patterns used to "select" (target) HTML elements so you can style them with CSS.</p>
+  <p class="highlight">They act like rules that tell the browser which elements the style should apply to.</p>
+  <p class="box">The most common selectors include the universal selector (*), which selects all elements, the element selector (like p or h1), which styles specific tags, and the class selector (.classname) or ID selector (#idname), which style elements based on their attributes.</p>
+  <p class="intro highlight box">More complex selectors include the descendant selector (div p), which selects elements inside another element, the child selector (div > p), which selects only direct children, and sibling selectors such as adjacent sibling (h1 + p) and general sibling (h1 ~ p) to style elements next to each other.</p>
+  <div>
+    <p>CSS selectors are the foundation of styling in web design, and they can be combined or refined for precise control.</p>
+    <p class="highlight">Attribute selectors (e.g., input[type="text"]) allow targeting based on attributes, while pseudo-classes like :hover or :nth-child() and pseudo-elements like ::before and ::after give advanced control over styling.</p>
+  </div>
+  <a href="https://www.example.com">Visit Example.com</a>
+  <p>These selectors make CSS powerful and flexible for designing webpages.</p>
+</body>
+</html>
